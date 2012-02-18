@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  */
 public class MathServicesServlet extends HttpServlet {
-	
+	 
 	/**
 	 * Serial version id. 
 	 */
