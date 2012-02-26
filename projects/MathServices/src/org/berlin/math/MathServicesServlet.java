@@ -1,3 +1,14 @@
+/**
+ * For source:
+ * 
+ * https://github.com/berlinbrown/physicsforprogrammers/tree/master/projects/MathServices
+ * 
+ * Also see:
+ * 
+ * https://github.com/berlinbrown
+ * http://berlinbrown.github.com/
+ * http://berlinbrown.github.com/applets.html
+ */
 package org.berlin.math;
 
 import java.io.IOException;
@@ -20,6 +31,17 @@ public class MathServicesServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	protected int mathFuncFibonacci(final int n) {
+		 int f0a = 0;
+		 int f1b = 1;
+         for (int i = 0; i < n; i++) {
+             final int savePrev1 = f0a;
+             f0a = f1b;
+             f1b = savePrev1 + f1b;
+         }
+         return f0a;
+	}
+	
 	public void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
 		
 		response.setContentType("text/plain");		
@@ -46,7 +68,34 @@ public class MathServicesServlet extends HttpServlet {
 					} catch(final Throwable t) {
 						resultMessage = "error ; Error at function";
 					} // End of the try - catch //
-				} // End of the if //								
+				} // End of the if //					
+				
+			} else if ("fib".equalsIgnoreCase(func)) {
+				
+				final String n = request.getParameter("n");
+				try { 			
+					final int ni = Integer.parseInt(n);
+					final int fib = mathFuncFibonacci(ni);
+					resultMessage = String.valueOf(fib);
+				} catch(final Throwable t) {
+					resultMessage = "error ; Error at function";
+				} // End of the try - catch //
+				
+			} else if ("fib2".equalsIgnoreCase(func)) {
+				
+				final String n = request.getParameter("n");
+				try { 			
+					final int ni = Integer.parseInt(n);
+					
+					final StringBuffer buf = new StringBuffer();
+					for (int i = 0; i <= ni; i++) {
+						buf.append(mathFuncFibonacci(i) + ", ");
+					}								
+					resultMessage = buf.toString();
+				} catch(final Throwable t) {
+					resultMessage = "error ; Error at function";
+				} // End of the try - catch //
+				
 			} else if ("sum".equalsIgnoreCase(func)) {				
 				final String n = request.getParameter("n");
 				try { 						
