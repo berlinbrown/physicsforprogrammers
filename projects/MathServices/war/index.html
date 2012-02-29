@@ -13,7 +13,10 @@
   </head>
 
   <body>
-    <h1>Math Services</h1>
+    <h3>Math Services</h3>
+	<p>
+	 Utility math routines from a google appengine application. 
+	</p>
 	
     <table>
       <tr>
@@ -21,12 +24,20 @@
       </tr>
       <tr>
         <td>
-        	<a href="mathservices">Basic Math Utilities</a>
+        	<a href="/mathservices?func=range&from=0&to=20">Basic Math Utilities</a>
         	<div>
         	
         		<ul>
         			<li>	
-        				<a href="/mathservices?func=range&from=0&to=20">Range</a>
+        				<a href="/mathservices?func=range&from=0&to=20">Range</a> - Print the range of numbers 'from', 'to'.
+        			</li>
+        			
+        			<li>	
+        				<a href="/mathservices?func=fib&n=8">Fibonacci</a> - Find the fibonacci number.
+        			</li>
+        			
+        			<li>	
+        				<a href="/mathservices?func=fib2&n=8">Fibonacci numbers</a> - Print the first set of fibonacci numbers.
         			</li>
         		</ul>        		
         	
@@ -37,13 +48,30 @@
       </tr>                 
     </table>
     
-    <div>
-       <a href="https://github.com/berlinbrown/physicsforprogrammers/tree/master/projects/MathServices">Source Code</a>
-    </div>
-    
-    
+    <table>
+      	<tr>
+        	<td colspan="2" style="font-weight:bold;">Resources:</td>        
+      	</tr>
+   	  	<tr>
+   	  		<td>
+    			<div>
+       				<a href="https://github.com/berlinbrown/physicsforprogrammers/tree/master/projects/MathServices">Source Code</a>
+       				<br />
+       				<a href="http://berlinbrowndev.blogspot.com">Blog</a>
+       				<br />
+       				<a href="http://berlinbrowndev.blogspot.com">Google Pages</a>
+    			</div>
+			</td>
+		</tr>
+	</table>
+    	
+    	    
+	<div style="margin-top: 10px">
+    		<img src="imgs/math_img.png" />
+	</div>
+        
     <p>
-    -- Berlin Brown (berlin dot brown at gmail.com)
+      -- Berlin Brown (berlin dot brown at gmail.com)
     </p>
   </body>
 </html>
