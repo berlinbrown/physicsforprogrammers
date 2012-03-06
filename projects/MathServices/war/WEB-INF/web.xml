@@ -8,10 +8,22 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>MathServices</servlet-name>
 		<servlet-class>org.berlin.math.MathServicesServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>DemoImage</servlet-name>
+		<servlet-class>org.berlin.math.demo.ImageDemoMandelbrotServlet</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>MathServices</servlet-name>
 		<url-pattern>/mathservices</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DemoImage</servlet-name>
+		<url-pattern>/demoimage</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>

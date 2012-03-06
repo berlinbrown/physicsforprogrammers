@@ -5,19 +5,41 @@
 <!-- "Quirks Mode". Replacing this declaration     -->
 <!-- with a "Standards Mode" doctype is supported, -->
 <!-- but may lead to some differences in layout.   -->
-
 <html>
-  <head>
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Math Services</title>
-  </head>
+    
+    <meta name="Description" content="The Math Service mission is to provide robust math utilities using Google Appengine">
+    <meta name="Keywords" content="google appengine, appengine, math,euler,berlin brown, berlin, ronpaul, paul, ron paul,C++,haskell, java, pi, literate programming, house md, science, astronomy, biology, chemistry, cognitive science, education, mathematics, clean code">
+    
+<style type='text/css'>
+@charset "UTF-8";
+body {
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+}
 
-  <body>
-    <h3>Math Services</h3>
+table tr td {
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 10pt;
+}
+
+</style>
+    
+</head>
+<body>
+<div style="margin: 6px">
+
+    <h3>Math Services on Google Appengine</h3>
 	<p>
-	 Utility math routines from a google appengine application. 
-	</p>
-	
+	 Utility math routines from a google appengine application.  This service also acts as an experiment in literate programming.
+	 Source for all of the examples are available.   (version 0.0.2)
+	</p>	
     <table>
       <tr>
         <td colspan="2" style="font-weight:bold;">Available Applications:</td>        
@@ -29,15 +51,30 @@
         	
         		<ul>
         			<li>	
-        				<a href="/mathservices?func=range&from=0&to=20">Range</a> - Print the range of numbers 'from', 'to'.
-        			</li>
-        			
+        				<a href="/mathservices?func=range&from=0&to=20">Range</a> - Print the range of numbers 'from', 'to'. 
+        			</li>        			
         			<li>	
-        				<a href="/mathservices?func=fib&n=8">Fibonacci</a> - Find the fibonacci number.
-        			</li>
-        			
+        				<a href="/mathservices?func=fib&n=8">Fibonacci</a> - Find the fibonacci number.  Change the parameter 'n' in your browser address bar.
+        				
+        				/ <a href="/fibLiterate.jsp?n=10">(literate example)</a>
+        			</li>        			
         			<li>	
-        				<a href="/mathservices?func=fib2&n=8">Fibonacci numbers</a> - Print the first set of fibonacci numbers.
+        				<a href="/mathservices?func=fib2&n=8">Fibonacci numbers</a> - Print the first set of fibonacci numbers.  Change the parameter 'n' in your browser address bar.
+        			</li>        			
+        			<li>	
+        				<a href="/mathservices?func=sum&n=100">Summation</a> - sum(n).  Change the parameter 'n' in your browser address bar.
+        			</li>        			
+        			<li>	
+        				<a href="/mathservices?func=plus&arg1=10&arg2=12">Add two numbers</a> - plus(x, y).  Change the arguments 'a' and 'b'.
+        			</li>        			
+        			<li>	
+        				<a href="/mathservices?func=numbers&n=200">Numbers Database</a> - Interesting numbers.
+        			</li>        		
+        			<li>	
+        				<a href="/mathservices?func=dates&n=200">Dates Database</a> - Interesting dates.
+        			</li>
+        			<li>	
+        				<a href="/demoimage">Mandelbrot Fractal</a> - Image of the mandelbrot fractal (10-15 second render time)
         			</li>
         		</ul>        		
         	
@@ -55,7 +92,8 @@
    	  	<tr>
    	  		<td>
     			<div>
-       				<a href="https://github.com/berlinbrown/physicsforprogrammers/tree/master/projects/MathServices">Source Code</a>
+       				<a href="https://github.com/berlinbrown/physicsforprogrammers/tree/master/projects/MathServices">Source Code (github)</a> 
+       				/ <a href="src1.html">servlet-src(snapshot1)</a>
        				<br />
        				<a href="http://berlinbrowndev.blogspot.com">Blog</a>
        				<br />
@@ -63,8 +101,7 @@
     			</div>
 			</td>
 		</tr>
-	</table>
-    	
+	</table>    	
     	    
 	<div style="margin-top: 10px">
     		<img src="imgs/math_img.png" />
@@ -73,5 +110,6 @@
     <p>
       -- Berlin Brown (berlin dot brown at gmail.com)
     </p>
-  </body>
+</div>    
+</body>
 </html>
